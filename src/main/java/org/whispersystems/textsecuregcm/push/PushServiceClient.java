@@ -33,18 +33,24 @@ public class PushServiceClient {
   private final String authorization;
 
   public PushServiceClient(Client client, PushConfiguration config) {
-    this.client        = client;
-    this.host          = config.getHost();
-    this.port          = config.getPort();
-    this.authorization = getAuthorizationHeader(config.getUsername(), config.getPassword());
+//    this.client        = client;
+//    this.host          = config.getHost();
+//    this.port          = config.getPort();
+//    this.authorization = getAuthorizationHeader(config.getUsername(), config.getPassword())
+
+    this.client = null;
+    this.host = null;
+    this.port = 9999;
+    this.authorization = null;
+
   }
 
   public void send(GcmMessage message) throws TransientPushFailureException {
-    sendPush(PUSH_GCM_PATH, message);
+//    sendPush(PUSH_GCM_PATH, message);
   }
 
   public void send(ApnMessage message) throws TransientPushFailureException {
-    sendPush(PUSH_APN_PATH, message);
+//    sendPush(PUSH_APN_PATH, message);
   }
 
   public List<UnregisteredEvent> getGcmFeedback() throws IOException {

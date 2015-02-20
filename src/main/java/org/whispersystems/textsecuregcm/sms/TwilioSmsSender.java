@@ -53,10 +53,10 @@ public class TwilioSmsSender {
   private final String localDomain;
 
   public TwilioSmsSender(TwilioConfiguration config) {
-    this.accountId    = config.getAccountId();
-    this.accountToken = config.getAccountToken();
-    this.number       = config.getNumber();
-    this.localDomain  = config.getLocalDomain();
+    this.accountId    = null; //config.getAccountId();
+    this.accountToken = null; //config.getAccountToken();
+    this.number       = null; //config.getNumber();
+    this.localDomain  = null; //config.getLocalDomain();
   }
 
   public void deliverSmsVerification(String destination, String verificationCode)

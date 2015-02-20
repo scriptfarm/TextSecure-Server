@@ -37,21 +37,21 @@ import io.dropwizard.db.DataSourceFactory;
 
 public class WhisperServerConfiguration extends Configuration {
 
-  @NotNull
-  @Valid
+//  @NotNull
+//  @Valid
   @JsonProperty
   private TwilioConfiguration twilio;
 
   @JsonProperty
   private NexmoConfiguration nexmo;
 
-  @NotNull
-  @Valid
+//  @NotNull
+//  @Valid
   @JsonProperty
   private PushConfiguration push;
 
-  @NotNull
-  @Valid
+//  @NotNull
+//  @Valid
   @JsonProperty
   private S3Configuration s3;
 
@@ -65,8 +65,8 @@ public class WhisperServerConfiguration extends Configuration {
   @JsonProperty
   private RedisConfiguration directory;
 
-  @Valid
-  @NotNull
+//  @Valid
+//  @NotNull
   @JsonProperty
   private DataSourceFactory messageStore;
 
